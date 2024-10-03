@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.url">jdbc:mysql://localhost:3306/sy</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">shivamyadav8055</property>
+
+        <!-- Automatically create or update database schema -->
+        <property name="hbm2ddl.auto">update</property>
+
+        <!-- Specify the dialect for your database -->
+        <property name="dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Enable or disable showing SQL statements in the console -->
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+
+        <!-- Specify the entity class mappings -->
+        <mapping class="demo.com.grocery_management_system.entities.user"/>
+        <mapping class="demo.com.grocery_management_system.entities.review"/>
+        <mapping class="demo.com.grocery_management_system.entities.product"/>
+        <mapping class="demo.com.grocery_management_system.entities.orderitem"/>
+        <mapping class="demo.com.grocery_management_system.entities.ordr"/>
+        <mapping class="demo.com.grocery_management_system.entities.category"/>
+        <mapping class="demo.com.grocery_management_system.entities.cartitem"/>
+        <mapping class="demo.com.grocery_management_system.entities.cart"/>
+    </session-factory>
+</hibernate-configuration>
+
